@@ -8,13 +8,13 @@ import qrcode
 class app():
     def __init__(self):
         self.raiz = Tk()
-        self.raiz.geometry("500x1000")        
+        self.raiz.geometry("500x500")        
         
         self.img = PhotoImage(file = 'QR.jpg')
         self.label_img = Label(self.raiz, image = self.img)
         self.label_img.pack()
 
-        self.texto = Text(width=100,height=1)
+        self.texto = Entry()
         self.texto.pack()
 
         botonGenerar = Button(text = "generar QR",command= self.generarQR)
@@ -23,9 +23,9 @@ class app():
         self.raiz.mainloop()
 
     def generarQR(self):
-        img = qrcode.make(self.texto.get("1.0",'end-1c'))
+        img = qrcode.make(self.texto.get())
         img.save("QR.jpg")
-        print("imagen guardada: " + self.texto.get("1.0",'end-1c'))
+        print("imagen guardada: " + self.texto.get())
         
         self.img = PhotoImage(file = 'QR.jpg')
         self.label_img.configure(image=self.img)
