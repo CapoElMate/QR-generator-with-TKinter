@@ -1,6 +1,6 @@
 # QR-generator-with-TKinter
 I made a simple python script to generate a QR code, the QR haves the content of the text bar, so you can make a QR with any text or URL you wish.
-#### Made by CapoElMate, January 23th, 2022.
+#### Made by CapoElMate with luichinni's big help, January 23th, 2022.
 
 # Como usar el programa:
 
